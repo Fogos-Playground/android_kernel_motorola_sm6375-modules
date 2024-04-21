@@ -3040,6 +3040,8 @@ INCS +=		$(COAP_WMI_INC)
 
 ccflags-y += $(INCS)
 
+ccflags-y += -D__ANDROID_COMMON_KERNEL__
+
 cppflags-y +=	-Wall\
 		-Werror
 
