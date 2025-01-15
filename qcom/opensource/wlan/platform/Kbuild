@@ -1,3 +1,11 @@
+ifeq ($(CONFIG_ARCH_BLAIR), y)
+include \
+	$(WLAN_PLATFORM_ROOT)/cnss_genl/blair_gki_defconfig \
+	$(WLAN_PLATFORM_ROOT)/cnss_prealloc/blair_gki_defconfig \
+	$(WLAN_PLATFORM_ROOT)/cnss_utils/blair_gki_defconfig \
+	$(WLAN_PLATFORM_ROOT)/icnss2/blair_gki_defconfig
+endif
+
 ifeq ($(CONFIG_CNSS_OUT_OF_TREE),y)
 KBUILD_CPPFLAGS += -DCONFIG_CNSS_OUT_OF_TREE
 endif
